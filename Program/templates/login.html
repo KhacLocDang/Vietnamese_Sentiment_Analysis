@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>LOC_MINH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Vietnamese_Sentiment_Analysis</h1>
+    <br>
+    <form action="" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" style="width:50%;" placeholder="SVM" name="SVM" value="{{
+          request.form.username }}">
+        </div>
+        <input class="btn btn-success" type="submit" value="Submit">
+      
+
+        <div class="form-group">
+            <input type="text" class="form-control" style="width:50%;" placeholder="LogisticRegression" name="LogisticRegression" value="{{
+          request.form.username }}">
+        </div>
+
+        <input class="btn btn-success" type="submit" value="Submit">
+        
+    </form>
+    {% if error %}
+    <p class="error"><strong>Result:</strong> {{ error }}
+        {% endif %}
+</div>
+</body>
+</html>
